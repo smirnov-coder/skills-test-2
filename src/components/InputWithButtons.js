@@ -48,7 +48,7 @@ class InputWithButtons extends React.Component {
      */
     getSubcomponentChildren(subcomponent) {
         // Сохраним ссылку на родительский компонент (input) для передачи его через props во все дочерние компоненты.
-        // Не будем использовать ни ref, и context. Таким образом наши контролы останутся полностью управляемыми React.
+        // Не будем использовать ни ref, ни context. Таким образом наши контролы останутся полностью управляемыми React.
         let container = this;
         let children = [];
         if (subcomponent) {
@@ -85,7 +85,7 @@ class InputWithButtons extends React.Component {
                 {!leftButtonsSubcomponent ? null :
                     <div className="input-group-prepend">
                         {React.Children.map(leftButtons, (button, index) => 
-                            // Незабудем про key, т.к. кнопок может быть несколько.
+                            // Не забудем про key, т.к. кнопок может быть несколько.
                             React.cloneElement(button, { key: index })
                         )}
                     </div>
