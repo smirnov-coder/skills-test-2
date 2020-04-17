@@ -1,0 +1,13 @@
+.section-controls {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-controls > * {
+  margin: 20px;
+}
+
+.input-group, .form-group {
+  max-width: 500px;
+}
