@@ -51,11 +51,6 @@ export default class InputWithSuggestions extends React.Component {
                 } else {
                     this.setState({ suggestions: data})
                 }
-            })
-            .catch(error => {
-                // Вывод посказок - это не та функциональность, из-за которой следует прерывать работу приложения или 
-                // даже назойливо надоедать пользователю alert'ами. Так что просто выведем ошибку в консоль.
-                console.error(error);
             });
     }
 }
